@@ -5,7 +5,8 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-DS3231": "github:keble6/pxt-ds3231#v1.0.2"
+        "pxt-DS3231": "github:keble6/pxt-ds3231#v1.0.2",
+        "tm1650": "github:YahboomTechnology/tm1650#d74a76c7400108f4658351d4a0e743fc776f3493"
     },
     "files": [
         "main.blocks",

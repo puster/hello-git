@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showString("" + convertToText(DS3231.date()) + "/" + strDay[DS3231.day()])
+    basic.showString("" + convertToText(DS3231.date()) + "/" + strDay[DS3231.day() - 1])
 })
 input.onButtonPressed(Button.AB, function () {
     DS3231.dateTime(
@@ -15,14 +15,17 @@ input.onButtonPressed(Button.AB, function () {
 })
 let strDay: string[] = []
 strDay = [
-"SUN.",
 "MON.",
 "TUE.",
 "WED.",
 "THU.",
 "FRI.",
-"SAT."
+"SAT.",
+"SUN."
 ]
 loops.everyInterval(2000, function () {
-    basic.showString("" + convertToText(DS3231.hour()) + ":" + convertToText(DS3231.minute()))
+    TM1650.showRunging("" + convertToText(DS3231.hour()) + convertToText(DS3231.minute()), 0)
+    TM1650.showDpAt(1, true)
+    basic.pause(1000)
+    TM1650.showDpAt(1, false)
 })
