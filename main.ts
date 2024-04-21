@@ -29,3 +29,19 @@ loops.everyInterval(2000, function () {
     basic.pause(1000)
     TM1650.showDpAt(1, false)
 })
+basic.forever(function () {
+    basic.showIcon(IconNames.Square)
+    basic.pause(100)
+    basic.showIcon(IconNames.SmallSquare)
+    basic.pause(100)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.pause(100)
+    basic.showIcon(IconNames.SmallSquare)
+    basic.pause(100)
+})
