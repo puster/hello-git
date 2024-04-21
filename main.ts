@@ -24,10 +24,8 @@ strDay = [
 "SUN."
 ]
 loops.everyInterval(2000, function () {
-    TM1650.showRunging("" + convertToText(DS3231.hour()) + convertToText(DS3231.minute()), 0)
+    TM1650.showSring("" + convertToText(DS3231.hour()) + convertToText(DS3231.minute()))
     TM1650.showDpAt(1, true)
-    basic.showIcon(IconNames.Heart)
     basic.pause(1000)
     TM1650.showDpAt(1, false)
-    basic.clearScreen()
 })
